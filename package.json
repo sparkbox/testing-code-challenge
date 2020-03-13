@@ -2,9 +2,13 @@
   "name": "testing-code-challenge",
   "scripts": {
     "start": "node server",
+    "start:dev": "run-p start build:watch",
+    "build": "babel src/*.js -d dist",
+    "build:watch": "babel src/*.js -d dist -w",
     "test": "mocha",
     "test:jest": "jest"
   },
+  "main": "dist/triangleClassifier.js",
   "dependencies": {
     "express": "^4.17.1"
   },
@@ -16,6 +20,8 @@
     "babel-jest": "^25.1.0",
     "chai": "^4.2.0",
     "jest": "^25.1.0",
-    "mocha": "^7.1.0"
+    "mocha": "^7.1.0",
+    "npm-run-all": "^4.1.5",
+    "sinon": "^9.0.1"
   }
 }

@@ -37,11 +37,21 @@ Run the API server:
 npm start
 ```
 
+Top start the API server and the Babel task in parallel you can use:
+
+```
+npm run start:dev
+```
+
 With the server running you should be able to hit the following endpoint, with `n` representing the total number of sides to return:
 
 ```
 curl http://localhost:9999/geometry?totalsides=n
 ```
+
+### Running
+
+Running `node dist/triangleClassifier.js` should provide feedback about triangle status returned from the local triangle API.
 
 ### Testing
 
