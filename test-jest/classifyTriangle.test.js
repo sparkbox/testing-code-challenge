@@ -10,4 +10,9 @@ describe('triangleClassifier', () => {
     const triangle = classifyTriangle([2, 3, 4])
     expect(triangle).toBe('scalene')
   });
+
+  it('classifies an isosceles triangle', () => {
+    const triangle = classifyTriangle([2, 3, 3])
+    expect(triangle).toBe('isosceles')
+  });
 });
