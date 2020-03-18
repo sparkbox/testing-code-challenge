@@ -1,3 +1,8 @@
+const isEquilateral = ([ sideA, sideB, sideC ]) =>
+  sideA === sideB && sideB === sideC;
+
 export function classifyTriangle(sides) {
-  return 'equilateral'
+  return isEquilateral(sides)
+    ? 'equilateral'
+    : 'scalene'
 }
