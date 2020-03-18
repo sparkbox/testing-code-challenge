@@ -15,4 +15,9 @@ describe('triangleClassifier', () => {
     const triangle = classifyTriangle([2, 3, 3])
     expect(triangle).toBe('isosceles')
   });
+
+  it('identifies shapes that are not triangles', () => {
+    const triangle = classifyTriangle([1, 2])
+    expect(triangle).toBe('NaT')
+  });
 });
