@@ -20,4 +20,9 @@ describe('triangleClassifier', () => {
     const triangle = classifyTriangle([1, 2])
     expect(triangle).toBe('NaT')
   });
+
+  it('identifies sides that do not create a triangle', () => {
+    const triangle = classifyTriangle([1, 1, 3])
+    expect(triangle).toBe('NaT')
+  });
 });
