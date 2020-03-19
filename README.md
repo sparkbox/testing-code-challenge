@@ -14,7 +14,8 @@ This challenge is intended to focus on the following:
 
 This repo provides an API which will return an array of sides. A working solution will:
 - Fetch a response from the API
-- Determine if the sides returned in the response forms an equilateral, isosceles or scalene triangle.
+- Determine if the sides returned in the response forms an equilateral, isosceles or scalene triangle
+- Log the results to the console
 
 Things to consider while working on this challenge:
 - How will you design your modules to facilate TDD?
@@ -52,6 +53,19 @@ curl http://localhost:9999/geometry?totalsides=n
 ### Running
 
 Running `node dist/triangleClassifier.js` should provide feedback about triangle status returned from the local triangle API.
+
+### Fetching Data
+
+[Axios](https://github.com/axios/axios) is included in the project in order to fetch data from the server. This is just for convenience, feel free to use another fetching library if you prefer.
+
+Example usage:
+
+```js
+import axios from 'axios';
+
+axios.get('http://localhost:9999/geometry')
+  .then(({ data }) => console.log(data))
+```
 
 ### Testing
 

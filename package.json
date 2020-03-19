@@ -3,13 +3,14 @@
   "scripts": {
     "start": "node server",
     "start:dev": "run-p start build:watch",
-    "build": "babel src/*.js -d dist",
-    "build:watch": "babel src/*.js -d dist -w",
+    "build": "babel src/**/*.js -d dist",
+    "build:watch": "babel src/**/*.js -d dist -w",
     "test": "mocha",
     "test:jest": "jest"
   },
   "main": "dist/triangleClassifier.js",
   "dependencies": {
+    "axios": "^0.19.2",
     "express": "^4.17.1"
   },
   "devDependencies": {
